@@ -6,7 +6,7 @@ HTML:
 <div class="tab">
   <button class="tablinks" onclick="openMusic(event, 'Top Charts')">Top Charts</button>
   <button class="tablinks" onclick="openMusic(event, 'New Releases')">New Releases</button>
-  <button class="tablinks" onclick="openMusic(event, 'Tokyo')">Genres & Mood</button>
+  <button class="tablinks" onclick="openMusic(event, 'Genres & Mood')">Genres & Mood</button>
   <button class="tablinks" onclick="openMusic(event, 'Recommended')">Recommended</button>
 <button class="tablinks" onclick="openMusic(event, 'Your Playlists')">Your Playlists</button>
 </div>
@@ -48,11 +48,10 @@ HTML:
   src = "https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/Bebe_Rexha_-_All_Your_Fault_Pt_II.png/220px-Bebe_Rexha_-_All_Your_Fault_Pt_II.png"/>
 </div>
 
-<div id="Genres & Moods" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>These songs that may fit your mood.</p>
+<div id="Genres & Mood" class="tabcontent">
+  <h3 style>Genres & Mood</h3>
+  <p>These songs may fit your mood.</p>
 </div>
-
 
 CSS:
 
@@ -97,7 +96,7 @@ div.tab button.active {
     animation: fadeEffect 1s; /* Fading effect takes 1 second */
 }
 
-@-webkit-keyframes fadeEffect {
+@keyframes fadeEffect {
     from {opacity: 0;}
     to {opacity: 1;}
 }
@@ -106,6 +105,7 @@ div.tab button.active {
     from {opacity: 0;}
     to {opacity: 1;}
 }
+
 table, th, td {
     border-collapse: collapse;
     text-align: left;
@@ -126,6 +126,7 @@ table, th, td {
     height: 185px;
     width: 185px;
 }
+
 
 
 
@@ -157,4 +158,3 @@ function openMusic(evt, musicName) {
     evt.currentTarget.className += " active";
     
 }
-
