@@ -39,19 +39,19 @@ HTML:
 </div>
 
 <div id="New Releases" class="tabcontent">
-  <h3>New Releases</h3>
-  <p>These are the newest songs of the week.</p> 
+  <h3>New Albums and Singles</h3>
   <img id = "photo1"
   src = "https://upload.wikimedia.org/wikipedia/en/f/f8/Kesha_-_Rainbow_%28Official_Album_Cover%29.png"/>
   <img id = "photo2"
   src = "https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/f9/00/8e/f9008e79-a518-e714-ddde-f0b001d0506c/source/268x0w.jpg"/>
+  <img id = "photo3"
+  src = "https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/Bebe_Rexha_-_All_Your_Fault_Pt_II.png/220px-Bebe_Rexha_-_All_Your_Fault_Pt_II.png"/>
 </div>
 
 <div id="Genres & Moods" class="tabcontent">
   <h3>Tokyo</h3>
   <p>These songs that may fit your mood.</p>
 </div>
-
 
 
 CSS:
@@ -111,6 +111,22 @@ table, th, td {
     text-align: left;
     padding: 15px;
 }
+
+#photo1 {
+    height: 185px;
+    width: 185px;
+}
+    
+#photo2 {
+    height: 185px;
+    width: 185px;
+}
+
+#photo3 {
+    height: 185px;
+    width: 185px;
+}
+
 
 
 
