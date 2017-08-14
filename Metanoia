@@ -11,7 +11,9 @@ HTML:
 <button class="tablinks" onclick="openMusic(event, 'Your Playlists')">Your Playlists</button>
 </div>
 
-<div id="Top Charts" class="tabcontent">
+<div id="Top Charts" class="tabcontent"> 
+</div>
+<div style="width:500px;height:500px;line-height:3em;overflow:scroll;padding:5px;">
   <h3>Global Top 50</h3>
   <p>Download</p>
   <table style="width:100%">
