@@ -41,7 +41,10 @@ HTML:
 <div id="New Releases" class="tabcontent">
   <h3>New Releases</h3>
   <p>These are the newest songs of the week.</p> 
-  
+  <img id = "photo1"
+  src = "https://upload.wikimedia.org/wikipedia/en/f/f8/Kesha_-_Rainbow_%28Official_Album_Cover%29.png"/>
+  <img id = "photo2"
+  src = "https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/f9/00/8e/f9008e79-a518-e714-ddde-f0b001d0506c/source/268x0w.jpg"/>
 </div>
 
 <div id="Genres & Moods" class="tabcontent">
