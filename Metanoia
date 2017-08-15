@@ -1,18 +1,31 @@
 HTML:
 
 <!DOCTYPE html>
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Top Charts')">Top Charts</button>
-  <button class="tablinks" onclick="openCity(event, 'New Releases')">New Releases</button>
-  <button class="tablinks" onclick="openCity(event, 'Genres & Mood')">Genres & Mood</button>
-  <button class="tablinks" onclick="openCity(event, 'Recommended')">Recommended</button>
-  <button class="tablinks" onclick="openCity(event, 'Your Playlists')">Your Playlists</button>
-</div>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+<body style="background-color: #D17575;">
+<div class="w3-container">
+  <h2>Music</h2>
 
-<div id="Top Charts" class="tabcontent">
-  <h3>Global Top 50</h3>
-  <p>Download</p>
-  <table style="width:100%">
+  <div class="w3-row">
+    <a href="javascript:void(0)" onclick="openMusic(event, 'Top Charts');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Top Charts</div>
+    </a>
+    <a href="javascript:void(0)" onclick="openMusic(event, 'New Releases');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">New Releases</div>
+    </a>
+    <a href="javascript:void(0)" onclick="openMusic(event, 'Your Playlists');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Your Playlists</div>
+    </a>
+  </div>
+
+  <div id="Top Charts" class="w3-container music" style="display:none">
+    <h2>Global Top 10</h2>
+    <p>These are the top 10 songs of the week.</p>
+    <table style="width:100%">
   <tr>
     <th>Song</th>
     <th>Artist</th> 
@@ -33,34 +46,82 @@ HTML:
     <td>DJ Khaled, Rihanna, Bryson Tiller</td> 
     <td>3</td>
   </tr>
+  <tr>
+    <td>Unforgettable</td>
+    <td>French Montana, Swae Lee</td> 
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Feels</td>
+    <td>Calvin Harris, Pharell Williams, Katy Perry</td> 
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>2U (feat. Justin Bieber)</td>
+    <td>David Guetta, Justin Bieber</td> 
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>Attention</td>
+    <td>Charlie Puth</td> 
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>Shape of You</td>
+    <td>Ed Sheeran</td> 
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>I'm The One</td>
+    <td>DJ Khaled, Justin Bieber, Quavo, Chance The Rapper</td> 
+    <td>9</td>
+  </tr>
+  <tr>
+    <td>New Rules</td>
+    <td>Dua Lipa</td> 
+    <td>10</td>
+  </tr>
 </table>
-</div>
+  </div>
 
-
-<div id="New Releases" class="tabcontent">
-  <h3>New Albums and Singles</h3>
-  <img id = "photo1"
+  <div id="New Releases" class="w3-container music" style="display:none">
+    <h2>New Releases</h2>
+    <p>These are the newest songs of the week.</p>
+    <img id = "photo1"
   src = "https://upload.wikimedia.org/wikipedia/en/f/f8/Kesha_-_Rainbow_%28Official_Album_Cover%29.png"/>
   <img id = "photo2"
   src = "https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/f9/00/8e/f9008e79-a518-e714-ddde-f0b001d0506c/source/268x0w.jpg"/>
   <img id = "photo3"
   src = "https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/Bebe_Rexha_-_All_Your_Fault_Pt_II.png/220px-Bebe_Rexha_-_All_Your_Fault_Pt_II.png"/>
+  </div>
+
+  <div id="Your Playlists" class="w3-container music" style="display:none">
+    <h2>Playlists</h2>
+    <p>List your playlists.</p>
+  </div>
 </div>
 
-<div id="Genres & Mood" class="tabcontent">
-  <h3>Genres & Mood</h3>
-  <p>These songs may fit your mood.</p>
-</div>
+<script>
+function openMusic(evt, musicName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("music");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-border-red", "");
+  }
+  document.getElementById(musicName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-border-red";
+}
+</script>
 
-<div id="Recommended" class="tabcontent">
-  <h3>Genres & Mood</h3>
-  <p>These songs are recommended.</p>
-</div>
+</body>
+</body>
+</html>
 
-<div id="Your Playlists" class="tabcontent">
-  <h3>Playlists</h3>
-  <p>These are your playlists.</p>
-</div>
+
 
 
 
@@ -68,56 +129,6 @@ HTML:
 
 
 CSS:
-
-/* Style the tab */
-div.tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-}
-
-/* Style the buttons inside the tab */
-div.tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-}
-
-/* Change background color of buttons on hover */
-div.tab button:hover {
-    background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-div.tab button.active {
-    background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-}
-.tabcontent {
-    -webkit-animation: fadeEffect 1s;
-    animation: fadeEffect 1s; /* Fading effect takes 1 second */
-}
-
-@keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-@keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
 
 table, th, td {
     border-collapse: collapse;
@@ -146,9 +157,12 @@ table, th, td {
 
 
 
+
+
+
 Java Script:
 
-function openCity(evt, cityName) {
+function openMusic(evt, musicName) {
     // Declare all variables
     var i, tabcontent, tablinks;
 
@@ -165,6 +179,6 @@ function openCity(evt, cityName) {
     }
 
     // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(cityName).style.display = "block";
+    document.getElementById(musicName).style.display = "block";
     evt.currentTarget.className += " active";
 }
