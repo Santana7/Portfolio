@@ -1,19 +1,15 @@
 HTML:
 
-
-
 <!DOCTYPE html>
 <div class="tab">
-  <button class="tablinks" onclick="openMusic(event, 'Top Charts')">Top Charts</button>
-  <button class="tablinks" onclick="openMusic(event, 'New Releases')">New Releases</button>
-  <button class="tablinks" onclick="openMusic(event, 'Genres & Mood')">Genres & Mood</button>
-  <button class="tablinks" onclick="openMusic(event, 'Recommended')">Recommended</button>
-<button class="tablinks" onclick="openMusic(event, 'Your Playlists')">Your Playlists</button>
+  <button class="tablinks" onclick="openCity(event, 'Top Charts')">Top Charts</button>
+  <button class="tablinks" onclick="openCity(event, 'New Releases')">New Releases</button>
+  <button class="tablinks" onclick="openCity(event, 'Genres & Mood')">Genres & Mood</button>
+  <button class="tablinks" onclick="openCity(event, 'Recommended')">Recommended</button>
+  <button class="tablinks" onclick="openCity(event, 'Your Playlists')">Your Playlists</button>
 </div>
 
-<div id="Top Charts" class="tabcontent"> 
-</div>
-<div style="width:500px;height:500px;line-height:3em;overflow:scroll;padding:5px;">
+<div id="Top Charts" class="tabcontent">
   <h3>Global Top 50</h3>
   <p>Download</p>
   <table style="width:100%">
@@ -40,6 +36,7 @@ HTML:
 </table>
 </div>
 
+
 <div id="New Releases" class="tabcontent">
   <h3>New Albums and Singles</h3>
   <img id = "photo1"
@@ -55,8 +52,22 @@ HTML:
   <p>These songs may fit your mood.</p>
 </div>
 
-CSS:
+<div id="Recommended" class="tabcontent">
+  <h3>Genres & Mood</h3>
+  <p>These songs are recommended.</p>
+</div>
 
+<div id="Your Playlists" class="tabcontent">
+  <h3>Playlists</h3>
+  <p>These are your playlists.</p>
+</div>
+
+
+
+
+
+
+CSS:
 
 /* Style the tab */
 div.tab {
@@ -135,11 +146,9 @@ table, th, td {
 
 
 
-JAVA SCRIPT:
+Java Script:
 
-
-
-function openMusic(evt, musicName) {
+function openCity(evt, cityName) {
     // Declare all variables
     var i, tabcontent, tablinks;
 
@@ -156,7 +165,6 @@ function openMusic(evt, musicName) {
     }
 
     // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(musicName).style.display = "block";
+    document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
-    
 }
