@@ -2,7 +2,7 @@
 <html>
 <head>
   <style>
-    body {
+    <body>
 <title>W3.CSS</title>
 <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
 </head>
@@ -28,6 +28,19 @@
   <div id="Top Charts" class="w3-container music" style="display:none">
     <h2>Global Top 10</h2>
     <p>These are the top 10 songs of the week.</p>
+    <head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+}
+</style>
+</head>
+  
+ <body>
     <table style="width:100%">
   <tr>
     <th>Song</th>
@@ -439,6 +452,7 @@
     <td>10</td>
   </tr>
 </table>
+  </body>
   </div>
 
   <div id="New Releases" class="w3-container music" style="display:none">
@@ -500,17 +514,6 @@ function openMusic(evt, musicName) {
 
 
 
-
-
-
- table, th, td {
-    border-collapse: collapse;
-    text-align: left;
-    padding: 15px;
-    border: 1px solid black;
-    padding: 5px;
-    text-align: left;
-}
 
 #photo1 {
     height: 165px;
