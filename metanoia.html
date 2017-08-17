@@ -11,7 +11,6 @@
 <body style="font-family: 'Bree Serif', serif;">
 <div class="w3-container">
   <h2>Music</h2>
-
   <div class="w3-row">
     <a href="javascript:void(0)" onclick="openMusic(event, 'Top Charts');">
       <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Top Charts</div>
@@ -465,7 +464,6 @@
     <h2>Playlists</h2>
     <p>List your playlists.</p>
   </div>
-</div>
 
 <script>
 function openMusic(evt, musicName) {
@@ -494,19 +492,16 @@ function openMusic(evt, musicName) {
   function openCity(evt, cityName) {
     // Declare all variables
     var i, tabcontent, tablinks;
-
     // Get all elements with class="tabcontent" and hide them
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
-
     // Get all elements with class="tablinks" and remove the class "active"
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
