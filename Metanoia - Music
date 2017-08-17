@@ -1,5 +1,3 @@
-HTML:
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -505,7 +503,6 @@ function openMusic(evt, musicName) {
 
 
 
-CSS:
 
 table, th, td {
     border-collapse: collapse;
@@ -560,7 +557,7 @@ body {
 
 
 
-Java Script:
+
 
 function openCity(evt, cityName) {
     // Declare all variables
