@@ -467,9 +467,30 @@
   </div>
 </div>
 
+<script>
+function openMusic(evt, musicName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("music");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-border-red", "");
+  }
+  document.getElementById(musicName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-border-red";
+}
+</script>
+</body>
+</body>
+</html>
  
   
   
+
+
+
   function openCity(evt, cityName) {
     // Declare all variables
     var i, tabcontent, tablinks;
