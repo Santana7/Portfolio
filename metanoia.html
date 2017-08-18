@@ -474,7 +474,16 @@
   <div id="Your Playlists" class="w3-container music" style="display:none">
     <h2>Playlists</h2>
     <p>List your playlists.</p>
+    <input type="text" id="myText">
+
+<p>Your songs will show below.</p>
+
+<button onclick="myFunction()">Add Song</button>
+
+<p id="demo"></p>
+
   </div>
+</div>
 
 <script>
 function openMusic(evt, musicName) {
@@ -489,6 +498,11 @@ function openMusic(evt, musicName) {
   }
   document.getElementById(musicName).style.display = "block";
   evt.currentTarget.firstElementChild.className += " w3-border-red";
+}
+
+function myFunction() {
+    var x = document.getElementById("myText").value;
+    document.getElementById("demo").innerHTML = x;
 }
 </script>
 </body>
